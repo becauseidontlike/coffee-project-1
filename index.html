@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weird coffee person ☕</title>
+    <style>
+        body {
+            background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+        }
+
+        hr {
+            border-color: #dd9f54;
+            border-width: 5px;
+            border-style: ridge;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(150, 97, 44);
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: peru;
+            background: linear-gradient(44.8deg, rgba(255, 136, 102, 0.67) -53.1%, rgba(255, 221, 136, 0.28) 49%);
+            border: 1px solid peru;
+            line-height: 50px;
+            font-size: 22px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border-radius: 3px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 13px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 20px 0px 0px 0px;
+            text-align: justify;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 10px;
+            color: #5e3709;
+            background-color: rgb(231, 151, 71);
+            font-size: 15px;
+            font-style: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        span {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .link {
+            margin-top: 10px;
+            text-decoration: none;
+            color: peru;
+            font-size: 12px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+            font-size: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .footer {
+            font-size: 11px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <hr>
+        <h1>Coffee ☕</h1>
+        <h2>Speciality coffee <strong>only</strong></h2>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/287/original/coffee.jpg?1671996584"
+            alt="coffee preparation" srcset="" width="550">
+        <p>
+            <strong>Specialty coffee</strong> is a term for the highest grade of coffee available, typically relating to
+            the entire supply chain, using single origin or single estate coffee. The term was first used in 1974 by
+            Erna Knutsen in an issue of <em>Tea & Coffee Trade Journal</em>. Knutsen used specialty coffee to describe
+            beans of the best
+            flavor which are produced in special micro-climates.
+
+            Specialty coffee is related to the farmers and the brewer what is known as the third wave of coffee,
+            especially throughout North America. This refers to a modern demand for exceptional quality coffee, both
+            farmed
+            and brewed to a significantly higher than average standard.
+        </p>
+        <br />
+        <a href="https://en.wikipedia.org/wiki/Specialty_coffee" target="_blank" class="link"> Learn more on Wikipedia
+            🍪
+        </a>
+        <a href="https://www.morningbrew.com/daily" target="_blank" class="link">News not only for coffee drinkers
+            🗞️</a>
+        <a href="https://open.spotify.com/playlist/37i9dQZF1DXa1BeMIGX5Du" target="_blank" class="link">Music for your
+            morning coffee experience 🎶</a>
+        <a href="https://europeancoffeetrip.com/" target="_blank" class="link">Need coffee while travel? Some cool
+            places to visit in Europe 🛣️</a>
+        <button>Buy speciality coffee</button>
+        <span class="espresso">
+            <a href="https://www.coffeedesk.com/coffee/brewing-method/for-espresso/" target="_blank"> <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/347/original/dark.png?1672060798"
+                    alt="dark roast" width="30px"></a>
+        </span>
+        <span class="filter">
+            <a href="https://www.coffeedesk.com/coffee/brewing-method/for-filter/" target="_blank"><img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/346/original/light.png?1672060793"
+                    alt="light roast" width="30px"></a>
+        </span>
+        <br /><br />
+        <hr>
+        <span class="footer">This page was built by WP</span>
+    </div>
+
+    <script>
+        function shop() {
+            let choice1 = prompt("How many espresso are you drinking daily?");
+            let choice2 = prompt("Are you drinking alternative brews?");
+            let span1 = document.querySelector(".espresso");
+            let span2 = document.querySelector(".filter");
+            choice1 = choice1.trim()
+            choice2 = choice2.trim()
+            choice2 = choice2.toUpperCase()
+            if (choice1 > 0) {
+                span1.insertAdjacentHTML("beforebegin", choice1 + " espresso? Really? Here are coffee beans for espresso lovers. ->");
+            } else {
+                span2.insertAdjacentHTML("beforebegin", choice2 + "? Really? Here are coffee beans for you to try at home! ->");
+            }
+        }
+
+        let button = document.querySelector("button");
+        button.addEventListener("click", shop)
+
+    </script>
+</body>
+
+</html>
